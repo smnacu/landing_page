@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load i18n static %}
+
+{% block title %}Daruma - Soluciones Tecnológicas Integrales{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>{% trans "Soluciones Tecnológicas para Empresas Argentinas" %}</h1>
+        <p class="lead">
+            {% trans "Brindamos soluciones integrales de IT para potenciar tu negocio. Soporte técnico especializado, infraestructura confiable y asesoramiento experto." %}
+        </p>
+        <div class="hero-cta">
+            <a href="#support" class="btn primary">{% trans "Solicitar Soporte" %}</a>
+            <a href="#" class="btn">{% trans "Conocer Nuestros Servicios" %}</a>
+        </div>
+    </div>
+</section>
+
+<section class="services-summary container" id="servicios">
+    <h2 class="section-title">{% trans "Servicios Especializados para tu Empresa" %}</h2>
+    <p class="section-subtitle">{% trans "Desde soporte técnico inmediato hasta el desarrollo de software a medida, tenemos la solución que necesitas." %}</p>
+    <div style="text-align: center;">
+         <a href="#" class="btn primary">{% trans "Ver Todos los Servicios" %}</a>
+    </div>
+</section>
+
+<section class="support container" id="support">
+    <h2 class="section-title">{% trans "Soporte Técnico Inmediato" %}</h2>
+    <p class="section-subtitle">{% trans "Asistencia remota profesional en tiempo real" %}</p>
+    <div class="support-controls" style="text-align:center; margin:2rem 0;">
+        <button id="show-os" class="btn">Mostrar Sistema Operativo</button>
+        <span id="user-os" style="margin-left:1rem;color:var(--muted);"></span>
+        <br/>
+        <button id="show-ip" class="btn" style="margin-top:1rem;">Mostrar mi IP pública</button>
+        <span id="user-ip" style="margin-left:1rem;color:var(--muted);"></span>
+        <div style="margin-top:1.5rem;">
+            <a href="{% static 'downloads/TeamViewerQS.exe' %}" class="btn primary" download>Descargar TeamViewer QuickSupport</a>
+        </div>
+    </div>
+    </section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/support.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+{% endblock %}
