@@ -1,47 +1,133 @@
-{% extends 'base.html' %}
-{% load i18n static %}
-
-{% block title %}Daruma - Soluciones Tecnológicas Integrales{% endblock %}
-
-{% block content %}
-<section class="hero">
-    <div class="hero-content">
-        <h1>{% trans "Soluciones Tecnológicas para Empresas Argentinas" %}</h1>
-        <p class="lead">
-            {% trans "Brindamos soluciones integrales de IT para potenciar tu negocio. Soporte técnico especializado, infraestructura confiable y asesoramiento experto." %}
-        </p>
-        <div class="hero-cta">
-            <a href="#support" class="btn primary">{% trans "Solicitar Soporte" %}</a>
-            <a href="#" class="btn">{% trans "Conocer Nuestros Servicios" %}</a>
-        </div>
+{% extends 'base.html' %} {% load i18n static %} {% block title %}Daruma -
+Soluciones Tecnológicas Integrales{% endblock %} {% block content %}
+<section
+  class="hero"
+  style="
+    box-shadow: 0 2px 16px var(--shadow-color);
+    border-radius: 1.5rem;
+    padding: 2.5rem 2rem;
+    margin-bottom: 2rem;
+  "
+>
+  <div class="hero-content">
+    <h1>{% trans "Soluciones Tecnológicas para Empresas Argentinas" %}</h1>
+    <p class="lead">
+      💼 Brindamos soluciones integrales de IT para potenciar tu negocio 🚀.
+      Soporte técnico especializado 🧑‍💻, infraestructura confiable 🖥️ y
+      asesoramiento experto 🤝.
+    </p>
+    <div class="hero-cta">
+      <a
+        href="{% url 'services' %}"
+        class="btn primary"
+        aria-label="Ver todos los servicios y solicitar asesoramiento"
+        >💼 Ver Servicios y Asesoramiento</a
+      >
     </div>
+  </div>
 </section>
 
-<section class="services-summary container" id="servicios">
-    <h2 class="section-title">{% trans "Servicios Especializados para tu Empresa" %}</h2>
-    <p class="section-subtitle">{% trans "Desde soporte técnico inmediato hasta el desarrollo de software a medida, tenemos la solución que necesitas." %}</p>
-    <div style="text-align: center;">
-         <a href="#" class="btn primary">{% trans "Ver Todos los Servicios" %}</a>
-    </div>
+<section
+  class="services-summary container"
+  id="servicios"
+  style="
+    box-shadow: 0 2px 12px var(--shadow-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  "
+>
+  <h2 class="section-title">{% trans "Soluciones IT a tu medida" %}</h2>
+  <p class="section-subtitle">
+    ⚡ Ofrecemos soporte técnico inmediato, gestión de infraestructura 🏢,
+    desarrollo de software 💻 y asesoramiento personalizado 📈 para empresas
+    argentinas.
+  </p>
+  <div
+    style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap"
+  >
+    <!-- Botón único para servicios y asesoramiento -->
+    <a
+      href="{% url 'services' %}"
+      class="btn primary"
+      aria-label="Ver todos los servicios y solicitar asesoramiento"
+    >
+      💼 Ver Servicios y Asesoramiento
+    </a>
+  </div>
 </section>
 
-<section class="support container" id="support">
-    <h2 class="section-title">{% trans "Soporte Técnico Inmediato" %}</h2>
-    <p class="section-subtitle">{% trans "Asistencia remota profesional en tiempo real" %}</p>
-    <div class="support-controls" style="text-align:center; margin:2rem 0;">
-        <button id="show-os" class="btn">Mostrar Sistema Operativo</button>
-        <span id="user-os" style="margin-left:1rem;color:var(--muted);"></span>
-        <br/>
-        <button id="show-ip" class="btn" style="margin-top:1rem;">Mostrar mi IP pública</button>
-        <span id="user-ip" style="margin-left:1rem;color:var(--muted);"></span>
-        <div style="margin-top:1.5rem;">
-            <a href="{% static 'downloads/TeamViewerQS.exe' %}" class="btn primary" download>Descargar TeamViewer QuickSupport</a>
-        </div>
+<section
+  class="support container"
+  id="support"
+  style="
+    box-shadow: 0 2px 12px var(--shadow-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  "
+>
+  <h2 class="section-title">{% trans "Soporte Técnico Inmediato" %}</h2>
+  <p class="section-subtitle">
+    🖥️ Asistencia remota profesional en tiempo real ⏱️
+  </p>
+  <div class="support-controls" style="text-align: center; margin: 2rem 0">
+    <button id="show-os" class="btn" aria-label="Mostrar sistema operativo">
+      Mostrar Sistema Operativo
+    </button>
+    <span id="user-os" style="margin-left: 1rem; color: var(--muted)"></span>
+    <br />
+    <button
+      id="show-ip"
+      class="btn"
+      style="margin-top: 1rem"
+      aria-label="Mostrar IP pública"
+    >
+      Mostrar mi IP pública
+    </button>
+    <span id="user-ip" style="margin-left: 1rem; color: var(--muted)"></span>
+    <div style="margin-top: 1.5rem">
+      <a
+        href="{% static 'downloads/TeamViewerQS.exe' %}"
+        class="btn primary"
+        download
+        aria-label="Descargar TeamViewer QuickSupport"
+        >Descargar TeamViewer QuickSupport</a
+      >
     </div>
-    </section>
-{% endblock %}
-
-{% block scripts %}
+  </div>
+</section>
+{% endblock %} {% block scripts %}
 <script src="{% static 'js/support.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
 {% endblock %}
+<section
+  class="contacto container"
+  id="contacto"
+  style="
+    box-shadow: 0 2px 12px var(--shadow-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 500px;
+    text-align: center;
+  "
+>
+  <h2 class="section-title">Contacto Directo 📲</h2>
+  <p class="section-subtitle">
+    ¿Querés una consulta personalizada? Escribinos por WhatsApp y te ayudamos
+    rápido 💬.
+  </p>
+  <a
+    href="https://wa.me/5491161882546"
+    target="_blank"
+    rel="noopener"
+    class="btn primary"
+    aria-label="Contactar por WhatsApp"
+  >
+    <i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp Directo
+  </a>
+  <small style="display: block; margin-top: 1rem; color: var(--muted)"
+    >Podés configurar el número en el enlace de WhatsApp.</small
+  >
+</section>

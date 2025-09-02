@@ -15,6 +15,22 @@
   --max-width: 960px; /* Ancho máximo del contenedor */
 }
 
+/* Modo claro */
+.light-mode {
+  --bg: #f7f9fa;
+  --card-bg: #ffffff;
+  --text: #222c36;
+  --muted: #6c7a89;
+  --accent: #0fb2a6;
+  --accent-contrast: #fff;
+  --border-color: rgba(0,0,0,0.07);
+  --shadow-color: rgba(0,0,0,0.08);
+}
+
+body, html {
+  transition: background-color 0.3s, color 0.3s;
+}
+
 /* ------------------------- */
 /* --- Estilos Globales y Tipografía --- */
 /* ------------------------- */

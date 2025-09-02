@@ -1,62 +1,88 @@
-{% extends 'base.html' %}
-{% load i18n static %}
+{% extends 'base.html' %} {% load i18n static %} {% block title %}Nuestros
+Servicios - Daruma{% endblock %} {% block content %}
+<section class="container">
+  <h1>Nuestros Servicios</h1>
 
-{% block title %}Nuestros Servicios - Daruma{% endblock %}
+  <div
+    class="services-carousel"
+    aria-roledescription="carousel"
+    style="margin-bottom: 2rem"
+  >
+    <button id="carousel-prev" class="carousel-nav" aria-label="Anterior">
+      ◀
+    </button>
 
-{% block content %}
-  <section class="container">
-    <h1>Nuestros Servicios</h1>
+    <div class="carousel-track">
+      <article class="card service-card">
+        <div class="card-icon"><i class="fas fa-headset"></i></div>
+        <h3>Mesa de Ayuda 🖥️</h3>
+        <p>
+          Atención y resolución de incidentes para usuarios y equipos. Soporte
+          remoto inmediato y documentación clara para cada intervención. 👨‍💼
+        </p>
+      </article>
 
-    <div class="services-carousel" aria-roledescription="carousel">
-      <button id="carousel-prev" class="carousel-nav" aria-label="Anterior">◀</button>
+      <article class="card service-card">
+        <div class="card-icon"><i class="fas fa-server"></i></div>
+        <h3>Infraestructura IT 🏢</h3>
+        <p>
+          Diseñamos y desplegamos infraestructuras confiables: servidores, redes
+          y soluciones cloud híbridas orientadas a disponibilidad y seguridad.
+          🔒
+        </p>
+      </article>
 
-      <div class="carousel-track">
-        <article class="card service-card">
-          <div class="card-icon"><i class="fas fa-headset"></i></div>
-          <h3>{% trans "Mesa de Ayuda" %}</h3>
-          <p>{% trans "Atención y resolución de incidentes para usuarios y equipos. Soporte remoto inmediato y documentación clara para cada intervención." %}</p>
-        </article>
+      <article class="card service-card">
+        <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Ciberseguridad 🔐</h3>
+        <p>
+          Evaluaciones, hardening y monitoreo para proteger activos críticos.
+          Alineamiento con buenas prácticas y normativas aplicables. 🛡️
+        </p>
+      </article>
 
-        <article class="card service-card">
-          <div class="card-icon"><i class="fas fa-server"></i></div>
-          <h3>{% trans "Infraestructura IT" %}</h3>
-          <p>{% trans "Diseñamos y desplegamos infraestructuras confiables: servidores, redes y soluciones cloud híbridas orientadas a disponibilidad y seguridad." %}</p>
-        </article>
+      <article class="card service-card">
+        <div class="card-icon"><i class="fas fa-store"></i></div>
+        <h3>Venta y soporte de Tango 🏬</h3>
+        <p>
+          Distribución, integración y soporte para sistemas Tango (equipamiento
+          y software). Instalación y mantenimiento postventa. 🧾
+        </p>
+      </article>
 
-        <article class="card service-card">
-          <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
-          <h3>{% trans "Ciberseguridad" %}</h3>
-          <p>{% trans "Evaluaciones, hardening y monitoreo para proteger activos críticos. Alineamiento con buenas prácticas y normativas aplicables." %}</p>
-        </article>
+      <article class="card service-card">
+        <div class="card-icon"><i class="fas fa-code"></i></div>
+        <h3>Desarrollos a medida 💻</h3>
+        <p>
+          Aplicaciones web y servicios a medida, con foco en escalabilidad,
+          pruebas y entrega continua. 📈
+        </p>
+      </article>
 
-        <article class="card service-card">
-          <div class="card-icon"><i class="fas fa-store"></i></div>
-          <h3>Venta y soporte de Tango</h3>
-          <p>Distribución, integración y soporte para sistemas Tango (equipamiento y software). Instalación y mantenimiento postventa.</p>
-        </article>
+      <article class="card service-card">
+        <div class="card-icon"><i class="fas fa-bolt"></i></div>
+        <h3>Consultoría en potencia energética ⚡</h3>
+        <p>
+          Asesoramiento en eficiencia energética, integración de renovables y
+          dimensionamiento de plantas para consumo empresarial. 🌱
+        </p>
+      </article>
 
-        <article class="card service-card">
-          <div class="card-icon"><i class="fas fa-code"></i></div>
-          <h3>{% trans "Desarrollos a medida" %}</h3>
-          <p>{% trans "Aplicaciones web y servicios a medida, con foco en escalabilidad, pruebas y entrega continua." %}</p>
-        </article>
-
-        <article class="card service-card">
-          <div class="card-icon"><i class="fas fa-bolt"></i></div>
-          <h3>Consultoría en potencia energética</h3>
-          <p>Asesoramiento en eficiencia energética, integración de renovables y dimensionamiento de plantas para consumo empresarial.</p>
-        </article>
-
-        <article class="card service-card">
-          <div class="card-icon"><i class="fas fa-home"></i></div>
-          <h3>Domótica y SCADA</h3>
-          <p>Soluciones de automatización y supervisión para edificios industriales y comerciales, integrando sensores, PLCs y paneles SCADA.</p>
-        </article>
-      </div>
-
-      <button id="carousel-next" class="carousel-nav" aria-label="Siguiente">▶</button>
+      <article class="card service-card">
+        <div class="card-icon"><i class="fas fa-home"></i></div>
+        <h3>Domótica y SCADA 🏠</h3>
+        <p>
+          Soluciones de automatización y supervisión para edificios industriales
+          y comerciales, integrando sensores, PLCs y paneles SCADA. 🤖
+        </p>
+      </article>
     </div>
-  </section>
 
-  <script src="{% static 'js/carousel.js' %}"></script>
+    <button id="carousel-next" class="carousel-nav" aria-label="Siguiente">
+      ▶
+    </button>
+  </div>
+</section>
+
+<script src="{% static 'js/carousel.js' %}"></script>
 {% endblock %}
