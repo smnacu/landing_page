@@ -8,3 +8,6 @@ db.sqlite3
 *.log
 dist/
 build/
+.env
+staticfiles/
+media/
