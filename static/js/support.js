@@ -36,7 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (ipButton && ipTarget) {
     ipButton.addEventListener('click', async () => {
       ipTarget.textContent = 'Consultando...';
-      ipTarget.textContent = await getPublicIP();
+      const ip = await getPublicIP();
+      ipTarget.textContent = ip;
     });
   }
 });
